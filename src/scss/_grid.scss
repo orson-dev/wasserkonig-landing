@@ -1,0 +1,24 @@
+@use "sass:math";
+$columns: 12;
+$col-width:math.div(100%,$columns);
+
+.container {
+  .row {
+    display: flex;
+    [class*="col-"] {
+      width: $col-width;
+      min-height: 1em;
+      padding: 0.5em;
+      &.centred {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    @for $i from 1 through $columns {
+        .col-#{$i} {
+          width: $i * $col-width;
+        }
+    }
+  }
+}
