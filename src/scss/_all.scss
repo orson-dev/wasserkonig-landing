@@ -75,12 +75,23 @@ body {
 }
 
 h3 {
-  font-family: $altFont;
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  color: $greenBlue;
+      height: 1.5rem;
+      img{
+        height: 100%;
+      }
 }
+// h3 {
+//   height: 1.4rem;
+//   background-image: url("../assets/images/Logo.svg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+  // font-family: $altFont;
+  // font-size: 1.4rem;
+  // font-weight: 800;
+  // letter-spacing: 0.05em;
+  // color: $greenBlue;
+// }
 
 a.inapoi {
   border-top: 2px solid $silver;
