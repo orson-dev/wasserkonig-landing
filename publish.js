@@ -1,6 +1,5 @@
 const fs = require('fs')
-const {useState} = require("react");
-const dest = '../huryti';
+const dest = '../wasserkonig-landing';
 const src = './assets/images'
 // File destination.txt will be created or overwritten by default.
 const copyFile = (filename,dest) => {
@@ -27,4 +26,3 @@ copyDir('./css')
 copyDir('./js')
 copyDir(src)
 copyFile('./index.html',dest + "/index.html")
-copyFile('./en.html',dest + "/en.html")

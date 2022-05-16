@@ -1,0 +1,80 @@
+.first {
+  display: flex;
+  flex-direction: column-reverse;
+  @include md {
+    flex-direction: row;
+  }
+
+  > div {
+    height: 50vh;
+    @include md {
+      height: 100vh;
+      width: 50%;
+    }
+  }
+
+  .info {
+    padding: 2rem 3rem;
+    @include sm {
+      padding: 4rem 6rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .middle_content {
+      h1 {
+        padding: 0.3em 0;
+      }
+
+      p {
+
+        @include md {
+          max-width: 85%;
+        }
+
+      }
+
+      .buttons {
+        padding: 2em 0;
+        @include xs {
+          padding: 3em 0;
+        }
+        display: flex;
+        justify-content: space-between;
+        @include md {
+          max-width: 80%;
+        }
+      }
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      @include sm {
+        justify-content: flex-start;
+      }
+
+      a {
+        font-size: 0.9rem;
+        color: $greenBlue;
+        display: block;
+        @include sm {
+          padding-right: 5em;
+        }
+
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .image {
+    background-image: url("../assets/images/bg.home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}

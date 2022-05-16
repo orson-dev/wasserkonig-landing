@@ -1,0 +1,31 @@
+.multumim {
+  padding: 4rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include md {
+    align-items: flex-start;
+  }
+  text-align: center;
+
+  h1 {
+    margin: 1em 0 0 0;
+    @include md {
+      margin: 2em 0 0 0;
+    }
+  }
+
+  p {
+    margin: 1em 0;
+    width: 100%;
+  }
+  a {
+    margin: 2em 0;
+    width: 100%;
+
+    @include xs {
+      margin: 4em 0;
+      width: 80%;
+    }
+  }
+}

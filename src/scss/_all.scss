@@ -1,6 +1,148 @@
 @use "sass:list";
 @use "sass:math";
+@import "elements/first";
+@import "elements/partener";
+@import "elements/form";
+@import "elements/multumim";
+$baseDimension: 3vw;
 
-@import "elements/home";
-@import "elements/become";
-@import "elements/contact";
+html {
+  font-family: $baseFont;
+  font-size: $baseDimension;
+  @include xs {
+    font-size: 0.6*$baseDimension;
+  }
+  @include sm {
+    font-size: 0.5*$baseDimension;
+  }
+  @include md {
+    font-size: 0.3*$baseDimension;
+  }
+}
+
+body {
+  background-color: $cultured;
+
+  section {
+    height: 100vh;
+  }
+}
+
+.btn {
+  padding: 1.2em 0;
+  border-radius: 10px;
+  font-family: $baseFont;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  width: 48%;
+  @include xs {
+    width: 45%;
+  }
+
+  text-align: center;
+
+  &.blue {
+    background-color: $greenBlue;
+    color: white;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: $prussianBlue;
+    }
+  }
+
+  &.white {
+    background-color: $cultured;
+    border: 1px solid white;
+    color: $prussianBlue;
+    box-shadow: 10px 10px 50px #00000026;
+    transition: 0.3s;
+
+    &:hover {
+      border: 3px solid white;
+      margin: -2px;
+      box-shadow: none;
+    }
+  }
+}
+
+.vertical_content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 {
+  font-family: $altFont;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: $greenBlue;
+}
+
+a.inapoi {
+  border-top: 2px solid $silver;
+  border-left: 2px solid $silver;
+  position: absolute;
+  top: 4rem;
+  left: 6rem;
+  color: $silver;
+  font-family: $baseFont;
+  font-weight: bold;
+  font-size: 0.8rem;
+  display: block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg);
+
+  @include sm {
+    border: none;
+    transform: none;
+    &:before {
+      content: "ÎNAPOI";
+
+    }
+  }
+}
+
+h1 {
+  font-family: $altFont;
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 1.1em;
+  letter-spacing: 0.04em;
+  color: $prussianBlue;
+}
+
+p {
+  color: $greenBlue;
+  font-family: $baseFont;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  @include md {
+    width: 75%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
